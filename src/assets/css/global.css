@@ -5,7 +5,7 @@
 
 @font-face {
     font-family:'Neue Machima';
-    src: url('/src/assets/fonts/neue-machina-regular.otf');
+    src: url('./src/assets/fonts/neue-machina-regular.otf');
 }
 
 body {
