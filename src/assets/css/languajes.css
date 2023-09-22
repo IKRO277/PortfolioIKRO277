@@ -26,6 +26,6 @@
     height: 1rem;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(/src/assets/img/icons/correct.svg);
+    background-image: url(../img/icons/correct.svg);
     margin-right: 0.5rem ;
 }

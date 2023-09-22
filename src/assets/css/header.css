@@ -55,26 +55,26 @@
     content: ' ';
     width: 1rem;
     height: 1rem;
-    background-image: url(/src/assets/img/icons/perfil-icon-contato.svg);
+    background-image: url(../img/icons/perfil-icon-contato.svg);
     background-repeat:no-repeat;
     background-size: contain;
     margin-right: .5rem;
 }
 
 .information .job::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-job.svg);
+    background-image: url(../img/icons/perfil-icon-job.svg);
 }
 
 .information .localization::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-localizacao.svg);
+    background-image: url(../img/icons/perfil-icon-localizacao.svg);
 }
 
 .information .email::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-email.svg);
+    background-image: url(../img/icons/perfil-icon-email.svg);
 }
 
 .information .contato::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-contato.svg);
+    background-image: url(../img/icons/perfil-icon-contato.svg);
 }
 
 @media screen and (min-width: 768px){
