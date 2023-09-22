@@ -1,5 +1,3 @@
-
-
 .header {
     display: flex;
     flex-direction: column;
@@ -10,30 +8,26 @@
 .header::after {
     content: '';
     display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     width: 2rem;
     height: 2rem;
-    top: 2.5rem;
-    right: 2.5rem;
     background-repeat: no-repeat;
-    position: absolute;
     background-size: contain;
-    background-image: url(/src/assets/img/icons/perfil-icons-header.svg);
+    background-image: url('../img/icons/header.svg');
 }
 
 .header .photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    
 }
 
 .header .title {
+    font-family: 'Neue Machina';
     text-align: center;
-    font-family: "neue Machima";
-    font-weight: lighter;
-    font-style: normal;
 }
-
 
 .information {
     display: flex;
@@ -43,62 +37,60 @@
 }
 
 .information p {
-    margin: .5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: .5rem;
     font-size: 1.125rem;
 }
 
 .information p::before {
+    content: '';
     display: inline-block;
-    content: ' ';
     width: 1rem;
     height: 1rem;
-    background-image: url(/src/assets/img/icons/perfil-icon-contato.svg);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     margin-right: .5rem;
 }
 
 .information .job::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-job.svg);
+    background-image: url('../img/icons/job.svg');
 }
 
-.information .localization::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-localizacao.svg);
+.information .location::before {
+    background-image: url('../img/icons/location.svg');
 }
 
 .information .email::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-email.svg);
+    background-image: url('../img/icons/email.svg');
 }
 
-.information .contato::before {
-    background-image: url(/src/assets/img/icons/perfil-icon-contato.svg);
+.information .phone::before {
+    background-image: url('../img/icons/phone.svg');
 }
 
-@media screen and (min-width: 768px){
-    
+@media only screen and (min-width: 768px) {
     .header {
         display: grid;
-        grid-template-areas: 
-        "photo title"
-        "photo information"
+        grid-template-areas:
+            "photo title"
+            "photo information"
         ;
-    }  
+    }
 
     .header .photo {
         grid-area: photo;
         margin: 0 auto;
-
     }
+
     .header .title {
         grid-area: title;
         text-align: start;
-        max-width: 200px;
+        max-width: 210px;
     }
 
-    .header .title {
-        grid-area: title;
+    .header .information {
+        grid-area: information;
     }
 }
