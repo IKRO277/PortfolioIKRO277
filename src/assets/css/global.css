@@ -11,6 +11,9 @@
 body {
     background-color: black;
     color: white;
+    background: linear-gradient(-45deg, #451952, #662549, #AE445A, #F39F5A);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
 }
 
 .main{
@@ -20,36 +23,22 @@ body {
     border-radius: 1rem;
 }
 
-.main::before {
-    content: "";
-    background-image: url(../img/backgrounds/background-gradient-top.svg);
-    display: inline-block;
-    background-repeat:no-repeat;
-    background-size: contain;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.main::after {
-    content: "";
-    background-image: url(../img/backgrounds/background-gradient-top.svg);
-    display: inline-block;
-    background-repeat:no-repeat;
-    background-size: contain;
-    width: 140vw;
-    height: 100vh;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    transform: rotate(180deg);
-    top: auto;
-    left: auto;
-}
+
 
 a {
     color: #fff;
@@ -71,5 +60,94 @@ a:hover {
     }
     .main::after {
         width: 70vw;
+    }
+}
+
+.wrapper span{
+    position: fixed;
+    bottom: -50px;
+    height: 1.875rem;
+    width: 1.875rem;
+    opacity: .2;
+    border-radius: 50%;
+    animation: animate 10s linear infinite;
+    z-index: -1;
+}
+
+.wrapper span:nth-child(1){
+    left: 0;
+    animation-delay: .6s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(2){
+    left: 10%;
+    animation-delay: 3s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(3){
+    left: 20%;
+    animation-delay: 2s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(4){
+    left: 30%;
+    animation-delay: 5s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(5){
+    left: 40%;
+    animation-delay: 1s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(6){
+    left: 50%;
+    animation-delay: 7s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(7){
+    left: 60%;
+    animation-delay: 6s;
+    background-color: #fff;
+}.wrapper span:nth-child(8){
+    left: 70%;
+    animation-delay: 8s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(9){
+    left: 80%;
+    animation-delay: 6s;
+    background-color: #fff;
+}
+.wrapper span:nth-child(10){
+    left: 90%;
+    animation-delay: 4s;
+    background-color: #fff;
+}
+
+@keyframes animate{
+    0% {
+        bottom: 0;
+        margin-left: 0;
+        margin-right: 5.625rem;
+    }
+    20% {
+        bottom: 20%;
+        margin-left: 5.625;
+        margin-right: 0;
+    }
+    40% {
+        bottom: 40%;
+        margin-left: 0;
+        margin-right: 5.625rem;
+    }
+    80% {
+        bottom: 80%;
+        margin-left: 5.625;
+        margin-right: 0;
+    }
+    100% {
+        bottom: 100%;
+        margin-left: 0;
+        margin-right: 5.625rem;
     }
 }
